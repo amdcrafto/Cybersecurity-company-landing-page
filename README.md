@@ -1,2 +1,15 @@
-# Cybersecurity-company-landing-page
-A high-fidelity cybersecurity platform landing page built for a fictional enterprise security company, designed to simulate real-world SaaS branding. It highlights advanced threat detection, security analytics, and enterprise protection services with a focus on trust, clarity, and user conversion.
+
+---
+
+## Author
+
+Ahmad Hamadina
+
+- GitHub: https://github.com/amdcrafto 
+- active link: https://securelock-cybersecurity-platform-157146512963.us-east1.run.app/
+
+---
+
+## About
+
+This project simulates a real cybersecurity SaaS landing page, focusing on clean design, usability, and professional UI structure.

@@ -1,0 +1,6 @@
+{
+  "name": "SecureLock Cybersecurity Platform",
+  "description": "Professional, high-precision digital defense, real-time threat telemetry diagnostics network, active critical infrastructure policies, and AI operations analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
