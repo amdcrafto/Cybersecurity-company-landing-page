@@ -365,8 +365,8 @@ export default function App() {
                 onClick={() => setActiveTab(tabId)}
                 className={`relative px-4 py-2 font-sans text-xs uppercase font-bold tracking-wider transition-colors cursor-pointer ${
                   activeTab === tabId
-                    ? (theme === "dark" ? "text-zinc-100" : "text-zinc-900")
-                    : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
+                    ? (theme === "dark" ? "text-zinc-105" : "text-zinc-955")
+                    : "text-zinc-700 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-200"
                 }`}
               >
                 <span className="relative z-10">{tabId === "solutions" ? "AI ANALYST" : tabId}</span>
@@ -389,7 +389,7 @@ export default function App() {
               id="theme-toggle"
               onClick={toggleTheme}
               aria-label="Toggle Theme Mode"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 dark:border-[#1F242E] bg-white dark:bg-[#0D0F14] text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-all cursor-pointer hover:scale-105 active:scale-95"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 dark:border-[#1F242E] bg-white dark:bg-[#0D0F14] text-zinc-750 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white transition-all cursor-pointer hover:scale-105 active:scale-95"
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
@@ -406,7 +406,7 @@ export default function App() {
         <button 
           onClick={() => setActiveTab("platform")}
           className={`flex-1 py-3 text-center text-xs font-mono tracking-wider cursor-pointer ${
-            activeTab === "platform" ? "text-zinc-900 dark:text-zinc-100 border-b-2 border-zinc-900 dark:border-zinc-100 font-bold" : "text-zinc-500"
+            activeTab === "platform" ? "text-zinc-950 dark:text-zinc-100 border-b-2 border-zinc-950 dark:border-zinc-100 font-bold" : "text-zinc-700 dark:text-zinc-400"
           }`}
         >
           PLATFORM
@@ -414,7 +414,7 @@ export default function App() {
         <button 
           onClick={() => setActiveTab("intelligence")}
           className={`flex-1 py-3 text-center text-xs font-mono tracking-wider cursor-pointer ${
-            activeTab === "intelligence" ? "text-zinc-900 dark:text-zinc-100 border-b-2 border-zinc-900 dark:border-zinc-100 font-bold" : "text-zinc-500"
+            activeTab === "intelligence" ? "text-zinc-955 dark:text-zinc-100 border-b-2 border-zinc-955 dark:border-zinc-100 font-bold" : "text-zinc-700 dark:text-zinc-400"
           }`}
         >
           INTELLIGENCE
@@ -422,7 +422,7 @@ export default function App() {
         <button 
           onClick={() => setActiveTab("solutions")}
           className={`flex-1 py-3 text-center text-xs font-mono tracking-wider cursor-pointer ${
-            activeTab === "solutions" ? "text-zinc-900 dark:text-zinc-100 border-b-2 border-zinc-900 dark:border-zinc-100 font-bold" : "text-zinc-500"
+            activeTab === "solutions" ? "text-zinc-955 dark:text-zinc-100 border-b-2 border-zinc-955 dark:border-zinc-100 font-bold" : "text-zinc-700 dark:text-zinc-400"
           }`}
         >
           AI CENTER
@@ -449,33 +449,33 @@ export default function App() {
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-800/15 via-transparent to-transparent dark:from-zinc-500/5" />
                 
                 {/* Tech Badging */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/40 px-3.5 py-1 text-xs">
-                  <span className={`flex h-2 w-2 rounded-full ${cyberShieldActive ? "bg-zinc-900 dark:bg-zinc-100 animate-pulse" : "bg-red-500 animate-pulse"}`} />
-                  <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest font-bold">
+                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/40 px-3.5 py-1 text-xs">
+                  <span className={`flex h-2 w-2 rounded-full ${cyberShieldActive ? "bg-zinc-950 dark:bg-zinc-100 animate-pulse" : "bg-red-500 animate-pulse"}`} />
+                  <span className="font-mono text-[10px] text-zinc-750 dark:text-zinc-450 uppercase tracking-widest font-bold">
                     System State: {cyberShieldActive ? "HYPER-SECURED" : "PERIMETER MONITORING ONLY"}
                   </span>
                 </div>
 
-                <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight md:text-5xl lg:text-7xl leading-tight text-transparent bg-clip-text bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-650 dark:from-white dark:via-zinc-200 dark:to-zinc-400">
+                <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight md:text-5xl lg:text-7xl leading-tight text-transparent bg-clip-text bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-700 dark:from-white dark:via-zinc-200 dark:to-zinc-400">
                   Absolute precision in <br />
                   <span>zero-trust defense</span>
                 </h1>
 
-                <p className="max-w-2xl text-base text-zinc-800 dark:text-zinc-300 md:text-lg font-normal leading-relaxed">
-                  Engineering flawless technical network boundaries. Providing impenetrable runtime posture defense across high-compliance financial channels and heavy industrial structures.
+                <p className="max-w-2xl text-base text-zinc-900 dark:text-zinc-300 md:text-lg font-normal leading-relaxed">
+                  Engineering flawless network boundaries. Providing impenetrable runtime posture defense across high-compliance financial channels and heavy industrial structures.
                 </p>
 
                 {/* Simulated Trigger Buttons */}
                 <div className="flex flex-col sm:flex-row items-start justify-start gap-4 pt-4">
                   <button
                     onClick={() => setActiveTab("intelligence")}
-                    className="group flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-zinc-900 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-100 text-white dark:text-black px-8 text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 shadow-sm cursor-pointer"
+                    className="group flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-zinc-950 hover:bg-zinc-850 dark:bg-white dark:hover:bg-zinc-100 text-white dark:text-black px-8 text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 shadow-sm cursor-pointer"
                   >
                     DEPLOY GATEWAY
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </button>
 
-                  <div className="flex h-12 w-full sm:w-auto items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/20 px-6 font-mono text-xs font-medium tracking-wide text-zinc-400 dark:text-zinc-500">
+                  <div className="flex h-12 w-full sm:w-auto items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-800 bg-white/70 dark:bg-black/20 px-6 font-mono text-xs font-bold tracking-wide text-zinc-750 dark:text-zinc-450">
                     ESCROW KEY POSTURE LOCKED
                   </div>
                 </div>
@@ -483,24 +483,24 @@ export default function App() {
                 {/* Header Stats Strip */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl pt-16">
                   <div className={`p-4 border rounded-md transition-all duration-300 hover:scale-[1.02] hover:shadow-sm ${
-                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-200 hover:border-zinc-400"
+                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-300 hover:border-zinc-450 shadow-xs"
                   }`}>
-                    <div className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest mb-1 font-bold">Total Threat Blocks</div>
-                    <div className="text-xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 font-mono">
+                    <div className="font-mono text-zinc-750 dark:text-zinc-450 text-[10px] uppercase tracking-widest mb-1 font-bold">Total Threat Blocks</div>
+                    <div className="text-xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 font-mono">
                       {totalBlocked.toLocaleString()}
                     </div>
                   </div>
                   <div className={`p-4 border rounded-md transition-all duration-300 hover:scale-[1.02] hover:shadow-sm ${
-                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-200 hover:border-zinc-400"
+                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-300 hover:border-zinc-450 shadow-xs"
                   }`}>
-                    <div className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest mb-1 font-bold">Secure Core Cells</div>
-                    <div className="text-xl font-black tracking-tight text-zinc-800 dark:text-zinc-200 font-mono">2,450 / 2,450</div>
+                    <div className="font-mono text-zinc-750 dark:text-zinc-450 text-[10px] uppercase tracking-widest mb-1 font-bold">Secure Core Cells</div>
+                    <div className="text-xl font-black tracking-tight text-zinc-900 dark:text-zinc-200 font-mono">2,450 / 2,450</div>
                   </div>
                   <div className={`p-4 border rounded-md transition-all duration-300 hover:scale-[1.02] hover:shadow-sm ${
-                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-200 hover:border-zinc-400"
+                    theme === "dark" ? "bg-[#0b0d13] border-[#1F242E] hover:border-zinc-700" : "bg-white border-zinc-300 hover:border-zinc-450 shadow-xs"
                   }`}>
-                    <div className="font-mono text-zinc-500 text-[10px] uppercase tracking-widest mb-1 font-bold">Telemetry Uptime</div>
-                    <div className="text-xl font-black tracking-tight text-zinc-800 dark:text-zinc-200 font-mono">99.9997%</div>
+                    <div className="font-mono text-zinc-750 dark:text-zinc-450 text-[10px] uppercase tracking-widest mb-1 font-bold">Telemetry Uptime</div>
+                    <div className="text-xl font-black tracking-tight text-zinc-900 dark:text-zinc-200 font-mono">99.9997%</div>
                   </div>
                 </div>
               </section>
@@ -537,13 +537,13 @@ export default function App() {
                     </h2>
                     
                     <p className={`text-sm leading-relaxed ${
-                      theme === "dark" ? "text-zinc-400" : "text-zinc-600"
+                      theme === "dark" ? "text-zinc-400" : "text-zinc-700 font-medium"
                     }`}>
                       Our AI-driven sensory network detects anomalies before they escalate. We do not just respond to breaches; we pre-engineer systems where they cannot possibly occur.
                     </p>
 
                     <p className={`text-xs ${
-                      theme === "dark" ? "text-zinc-500" : "text-zinc-500"
+                      theme === "dark" ? "text-zinc-500" : "text-zinc-805"
                     }`}>
                       By linking telemetry models directly into global cloud networks and SCADA hardware loops, secureLock minimizes operational exposure ratios.
                     </p>
@@ -562,8 +562,8 @@ export default function App() {
                   {/* Right Analytics Imagery Mockup */}
                   <div className="lg:col-span-3 rounded-md overflow-hidden border border-zinc-200 dark:border-[#1F242E] bg-white dark:bg-[#0b0d13] group">
                     <div className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0f1116] px-3 py-2 flex items-center justify-between">
-                      <span className="font-mono text-[9px] text-zinc-500 dark:text-zinc-400 font-bold uppercase">CONSOLE_TELEMETRY.RAW</span>
-                      <Activity className="h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500 animate-pulse" />
+                      <span className="font-mono text-[9px] text-zinc-750 dark:text-zinc-400 font-bold uppercase">CONSOLE_TELEMETRY.RAW</span>
+                      <Activity className="h-3.5 w-3.5 text-zinc-700 dark:text-zinc-400 animate-pulse" />
                     </div>
                     <img
                       src={ ASSETS.controlMonitor }
@@ -617,8 +617,8 @@ export default function App() {
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
-                      <div className="absolute bottom-4 left-4">
-                        <span className="rounded bg-black/85 border border-zinc-800 px-3 py-1 font-mono text-[9px] text-zinc-450 uppercase tracking-widest font-bold">
+                                      <div className="absolute bottom-4 left-4">
+                        <span className="rounded bg-black/85 border border-zinc-800 px-3 py-1 font-mono text-[9px] text-zinc-200 uppercase tracking-widest font-bold">
                           FINANCIAL SECTOR [LATENCY SECURED]
                         </span>
                       </div>
@@ -629,12 +629,12 @@ export default function App() {
                         <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
                           Project Vanguard
                         </h3>
-                        <p className="text-[10px] mt-1.5 font-mono uppercase tracking-widest text-zinc-700 dark:text-zinc-500 font-bold">
+                        <p className="text-[10px] mt-1.5 font-mono uppercase tracking-widest text-zinc-850 dark:text-zinc-400 font-bold">
                           LOCK LEVEL: {vanguardLockLevel.toUpperCase()} // CLICK TO MANAGE
                         </p>
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-md border border-zinc-200 dark:border-[#1F242E] bg-zinc-50 dark:bg-black/40 transition-all duration-300 group-hover:border-zinc-400 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
-                        <ArrowUpRight className="h-5 w-5 text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-100 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-md border border-zinc-300 dark:border-[#1F242E] bg-zinc-50 dark:bg-black/40 transition-all duration-300 group-hover:border-zinc-500 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
+                        <ArrowUpRight className="h-5 w-5 text-zinc-650 group-hover:text-zinc-905 dark:group-hover:text-zinc-100 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </div>
                     </div>
                   </div>
@@ -648,7 +648,7 @@ export default function App() {
                     className={`group cursor-pointer rounded-md border text-left overflow-hidden transition-all duration-300 hover:scale-[1.01] ${
                       theme === "dark" 
                         ? "border-[#1F242E] bg-[#0b0d13] hover:border-zinc-700 hover:shadow-md" 
-                        : "border-zinc-200 bg-white hover:border-zinc-400 hover:shadow-md"
+                        : "border-zinc-300 bg-white hover:border-zinc-450 hover:shadow-md shadow-xs"
                     }`}
                   >
                     <div className="relative h-64 overflow-hidden">
@@ -660,7 +660,7 @@ export default function App() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
                       <div className="absolute bottom-4 left-4">
-                        <span className="rounded bg-black/85 border border-zinc-800 px-3 py-1 font-mono text-[9px] text-zinc-400 uppercase tracking-widest font-bold">
+                        <span className="rounded bg-black/85 border border-zinc-800 px-3 py-1 font-mono text-[9px] text-zinc-200 uppercase tracking-widest font-bold">
                           CRITICAL INFRASTRUCTURE [SCADA CORE]
                         </span>
                       </div>
@@ -671,12 +671,12 @@ export default function App() {
                         <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
                           Operation Aegis
                         </h3>
-                        <p className="text-[10px] mt-1.5 font-mono uppercase tracking-widest text-zinc-700 dark:text-zinc-500 font-bold">
+                        <p className="text-[10px] mt-1.5 font-mono uppercase tracking-widest text-zinc-850 dark:text-zinc-400 font-bold">
                           LOCK LEVEL: {aegisLockLevel.toUpperCase()} // CLICK TO MANAGE
                         </p>
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-md border border-zinc-200 dark:border-[#1F242E] bg-zinc-50 dark:bg-black/40 transition-all duration-300 group-hover:border-zinc-400 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
-                        <ArrowUpRight className="h-5 w-5 text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-100 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-md border border-zinc-300 dark:border-[#1F242E] bg-zinc-50 dark:bg-black/40 transition-all duration-300 group-hover:border-zinc-500 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
+                        <ArrowUpRight className="h-5 w-5 text-zinc-650 group-hover:text-zinc-905 dark:group-hover:text-zinc-100 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </div>
                     </div>
                   </div>
@@ -807,24 +807,24 @@ export default function App() {
                 
                 {/* 1. Main Mitigations Timeline Chart (Area) */}
                 <div className={`lg:col-span-8 p-6 border rounded-md transition-colors ${
-                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-200"
+                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-300 shadow-sm"
                 }`}>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                     <div>
                       <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-white">
                         Intrusion Mitigation Timeline
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-xs text-zinc-700 dark:text-zinc-400 font-medium">
                         Overview of threat signals and blocked vectors across active secure gateways.
                       </p>
                     </div>
                     <div className="flex items-center gap-4 text-[10px] font-mono uppercase font-bold">
-                      <span className="flex items-center gap-1.5 text-zinc-700 dark:text-zinc-300">
+                      <span className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-300">
                         <span className="h-2 w-2 bg-zinc-700 dark:bg-zinc-300 rounded-full" />
                         Mitigated Signals
                       </span>
-                      <span className="flex items-center gap-1.5 text-zinc-400">
-                        <span className="h-2 w-2 bg-zinc-400 rounded-full" />
+                      <span className="flex items-center gap-1.5 text-zinc-700 dark:text-zinc-450">
+                        <span className="h-2 w-2 bg-zinc-500 dark:bg-zinc-500 rounded-full" />
                         Unusual Telemetry Spikes
                       </span>
                     </div>
@@ -887,12 +887,12 @@ export default function App() {
 
                 {/* 2. Threat Allocation Pie Chart */}
                 <div className={`lg:col-span-4 p-6 border rounded-md transition-colors ${
-                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-200"
+                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-300 shadow-sm"
                 }`}>
                   <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-white mb-1">
                     Threat Vector Burden
                   </h3>
-                  <p className="text-xs text-zinc-450 font-light mb-6">
+                  <p className="text-xs text-zinc-700 dark:text-zinc-400 font-medium mb-6">
                     Classification distribution of current active perimeter filters.
                   </p>
 
@@ -909,7 +909,7 @@ export default function App() {
                           dataKey="value"
                         >
                           {INITIAL_THREATS.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={entry.color} />
+                             <Cell key={`cell-${index}`} fill={entry.color} />
                           ))}
                         </Pie>
                         <Tooltip />
@@ -922,7 +922,7 @@ export default function App() {
                     {INITIAL_THREATS.map((ent, idx) => (
                       <div key={idx} className="flex items-center gap-1.5 text-[10px] font-mono leading-none">
                         <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ backgroundColor: ent.color }} />
-                        <span className="text-zinc-500 dark:text-zinc-400 truncate">{ent.name} ({ent.value}%)</span>
+                        <span className="text-zinc-750 dark:text-zinc-400 font-bold truncate">{ent.name} ({ent.value}%)</span>
                       </div>
                     ))}
                   </div>
@@ -935,13 +935,13 @@ export default function App() {
                 
                 {/* Deployment Control list */}
                 <div className={`lg:col-span-4 p-6 border rounded-md transition-colors ${
-                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-200"
+                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-300 shadow-sm"
                 } space-y-6`}>
                   <div>
                     <h3 className="text-md font-bold tracking-tight text-zinc-900 dark:text-white mb-1">
                       Platform Shield Boundaries
                     </h3>
-                    <p className="text-xs text-zinc-450 font-mono uppercase tracking-tight">
+                    <p className="text-xs text-zinc-750 dark:text-zinc-400 font-mono font-bold uppercase tracking-tight">
                       Adjust Node Diodes Standard/Maximum
                     </p>
                   </div>
@@ -952,13 +952,13 @@ export default function App() {
                         key={dep.id} 
                         className={`p-4 border rounded-md transition-all duration-300 ${
                           focusedDeployment === dep.id 
-                            ? "border-zinc-900 dark:border-zinc-100 bg-zinc-50 dark:bg-zinc-900/40" 
-                            : (theme === "dark" ? "border-[#1F242E] bg-black/40" : "border-zinc-200 bg-zinc-50/50")
+                            ? "border-zinc-950 dark:border-zinc-100 bg-zinc-50 dark:bg-zinc-900/40 shadow-xs" 
+                            : (theme === "dark" ? "border-[#1F242E] bg-black/40" : "border-zinc-300 bg-zinc-50/50")
                         }`}
                       >
                         <div className="flex items-center justify-between mb-2">
                           <div>
-                            <span className="font-mono text-[9px] text-zinc-500 block uppercase font-bold">{dep.sector}</span>
+                            <span className="font-mono text-[9px] text-zinc-750 dark:text-zinc-400 block uppercase font-bold">{dep.sector}</span>
                             <span className="font-bold text-sm tracking-tight text-zinc-900 dark:text-zinc-50">{dep.name}</span>
                           </div>
                           <span className={`px-2 py-0.5 rounded font-mono text-[8px] uppercase font-bold border ${
@@ -966,18 +966,18 @@ export default function App() {
                               ? "bg-red-500/10 text-red-500 border-red-500/30"
                               : dep.activeShields === "elevated"
                                 ? "bg-amber-500/10 text-amber-500 border-amber-500/30"
-                                : "bg-zinc-900 dark:bg-zinc-100 dark:text-black text-white border-zinc-800 dark:border-zinc-200"
+                                : "bg-zinc-950 dark:bg-zinc-100 dark:text-black text-white border-zinc-900 dark:border-zinc-200"
                           }`}>
                             {dep.activeShields}
                           </span>
                         </div>
 
-                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-3 truncate font-light">
+                        <p className="text-xs text-zinc-750 dark:text-zinc-400 mb-3 truncate font-normal">
                           {dep.recentActivity}
                         </p>
 
-                        <div className="space-y-1.5 pt-2 border-t border-zinc-200 dark:border-zinc-800">
-                          <span className="font-mono text-[8px] text-zinc-500 uppercase block font-bold">Policy Manual Intervention Override</span>
+                        <div className="space-y-1.5 pt-2 border-t border-zinc-300 dark:border-zinc-800">
+                          <span className="font-mono text-[8px] text-zinc-750 dark:text-zinc-400 uppercase block font-bold">Policy Manual Intervention Override</span>
                           <div className="grid grid-cols-3 gap-1">
                             {(["standard", "elevated", "maximum"] as const).map((lvl) => (
                               <button
@@ -986,7 +986,7 @@ export default function App() {
                                 className={`py-1 text-[8px] font-mono rounded uppercase transition-colors font-bold cursor-pointer border ${
                                   dep.activeShields === lvl
                                     ? "bg-zinc-950 dark:bg-white text-white dark:text-black border-zinc-950 dark:border-white"
-                                    : "border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
+                                    : "border-zinc-300 dark:border-zinc-800 text-zinc-750 hover:text-zinc-955 dark:hover:text-white"
                                 }`}
                               >
                                 {lvl}
@@ -998,35 +998,49 @@ export default function App() {
                     ))}
                   </div>
 
-                  <div className="p-4 bg-zinc-100 dark:bg-black/35 border border-zinc-200 dark:border-zinc-800 rounded-md">
+                  <div className="p-4 bg-zinc-100 dark:bg-black/35 border border-zinc-300 dark:border-zinc-800 rounded-md">
                     <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5 mb-1.5 uppercase font-mono">
-                      <LockKeyhole className="h-4 w-4 text-zinc-400" /> Secure Key Posture
+                      <LockKeyhole className="h-4 w-4 text-zinc-700 dark:text-zinc-400" /> Secure Key Posture
                     </span>
-                    <p className="text-[11px] text-zinc-500 dark:text-zinc-450 leading-relaxed font-light">
+                    <p className="text-[11px] text-zinc-800 dark:text-zinc-455 leading-relaxed font-medium">
                       Manual overrides trigger ephemeral cryptographic telemetry. Handled via mock sandbox keys.
                     </p>
                   </div>
                 </div>
 
                 {/* Simulated Logs Terminal (High details) */}
-                <div className="lg:col-span-8 flex flex-col h-[460px] rounded-sm bg-black border border-zinc-800">
+                <div className={`lg:col-span-8 flex flex-col h-[460px] rounded-sm border ${
+                  theme === "dark" 
+                    ? "bg-black border-zinc-800" 
+                    : "bg-white border-zinc-300 shadow-sm"
+                }`}>
                   
                   {/* Console Header */}
-                  <div className="bg-[#0f1116] border-b border-zinc-900 px-4 py-3 flex items-center justify-between font-mono text-xs">
+                  <div className={`border-b px-4 py-3 flex items-center justify-between font-mono text-xs ${
+                    theme === "dark" 
+                      ? "bg-[#0f1116] border-zinc-900" 
+                      : "bg-zinc-100 border-zinc-300"
+                  }`}>
                     <div className="flex items-center gap-2">
-                      <TerminalIcon className="h-4 w-4 text-zinc-400 animate-pulse" />
-                      <span className="text-zinc-450 dark:text-zinc-300 font-bold uppercase tracking-wider">SecureLock DIODE THREAT STREAM</span>
+                      <TerminalIcon className={`h-4 w-4 animate-pulse ${theme === "dark" ? "text-zinc-300" : "text-black"}`} />
+                      <span className={`font-bold uppercase tracking-wider ${theme === "dark" ? "text-zinc-300" : "text-black"}`}>
+                        SecureLock DIODE THREAT STREAM
+                      </span>
                     </div>
 
                     <div className="flex items-center gap-3">
                       {/* Interactive Log filtering bar */}
-                      <div className="flex items-center gap-1.5 border border-zinc-800 px-1.5 py-0.5 rounded bg-black">
+                      <div className={`flex items-center gap-1.5 border px-1.5 py-0.5 rounded ${
+                        theme === "dark" ? "border-zinc-800 bg-black" : "border-zinc-300 bg-white"
+                      }`}>
                         {(["all", "info", "warn", "critical"] as const).map(flt => (
                           <button
                             key={flt}
                             onClick={() => setLogFilter(flt)}
                             className={`px-2 py-0.5 text-[8px] font-sans font-bold rounded uppercase transition-colors cursor-pointer ${
-                              logFilter === flt ? "bg-zinc-800 text-white dark:bg-white dark:text-black" : "text-zinc-500 hover:text-zinc-300"
+                              logFilter === flt
+                                ? (theme === "dark" ? "bg-white text-black" : "bg-black text-white")
+                                : (theme === "dark" ? "text-zinc-500 hover:text-zinc-300" : "text-zinc-700 hover:text-black")
                             }`}
                           >
                             {flt}
@@ -1036,7 +1050,11 @@ export default function App() {
 
                       <button
                         onClick={() => setIsLogPaused(!isLogPaused)}
-                        className="p-1 rounded text-zinc-500 hover:text-white hover:bg-zinc-850 cursor-pointer"
+                        className={`p-1 rounded cursor-pointer ${
+                          theme === "dark" 
+                            ? "text-zinc-500 hover:text-white hover:bg-zinc-850" 
+                            : "text-zinc-800 hover:text-black hover:bg-zinc-200"
+                        }`}
                         title={isLogPaused ? "Resume Live Log Feed" : "Pause Live Log Feed"}
                       >
                         {isLogPaused ? <Play className="h-3 w-3" /> : <Pause className="h-3 w-3" />}
@@ -1045,7 +1063,11 @@ export default function App() {
                   </div>
 
                   {/* Logs Scroller body */}
-                  <div className="flex-1 overflow-y-auto p-4 font-mono text-[11px] leading-relaxed space-y-2 select-text scrollbar-thin scrollbar-thumb-zinc-800">
+                  <div className={`flex-1 overflow-y-auto p-4 font-mono text-[11px] leading-relaxed space-y-2 select-text scrollbar-thin ${
+                    theme === "dark" 
+                      ? "bg-black text-zinc-300 scrollbar-thumb-zinc-800" 
+                      : "bg-zinc-50 text-black scrollbar-thumb-zinc-300"
+                  }`}>
                     <AnimatePresence initial={false}>
                       {filteredLogs.map((log) => (
                         <motion.div
@@ -1054,17 +1076,21 @@ export default function App() {
                           animate={{ opacity: 1, x: 0 }}
                           className={`flex items-start gap-2 p-1.5 rounded transition-all duration-300 ${
                             log.severity === "critical"
-                              ? "bg-red-950/20 text-red-400 border-l-2 border-red-500"
+                              ? (theme === "dark" ? "bg-red-950/20 text-red-400 border-l-2 border-red-500" : "bg-red-50 text-red-500 border-l-2 border-red-500 font-bold")
                               : log.severity === "warn"
-                                ? "bg-amber-950/20 text-yellow-500 border-l-2 border-amber-500"
-                                : "text-zinc-300"
+                                ? (theme === "dark" ? "bg-amber-950/20 text-yellow-500 border-l-2 border-amber-500" : "bg-amber-50 text-amber-600 border-l-2 border-amber-500 font-bold")
+                                : (theme === "dark" ? "text-zinc-300" : "text-black")
                           }`}
                         >
-                          <span className="text-zinc-650 font-medium shrink-0">[{log.timestamp}]</span>
-                          <span className="text-zinc-400 shrink-0 uppercase tracking-widest text-[9px] font-semibold border border-zinc-850 rounded px-1.5 py-0.5 bg-neutral-900">
+                          <span className={`font-medium shrink-0 ${theme === "dark" ? "text-zinc-600" : "text-zinc-800"}`}>[{log.timestamp}]</span>
+                          <span className={`shrink-0 uppercase tracking-widest text-[9px] font-semibold border rounded px-1.5 py-0.5 ${
+                            theme === "dark" 
+                              ? "text-zinc-400 border-zinc-850 bg-neutral-900" 
+                              : "text-black border-zinc-300 bg-white shadow-xs"
+                          }`}>
                             {log.source.split(" ")[0]}
                           </span>
-                          <span className="text-[10px] text-zinc-500 font-semibold shrink-0">
+                          <span className={`text-[10px] font-semibold shrink-0 ${theme === "dark" ? "text-zinc-500" : "text-zinc-700"}`}>
                             PORT {log.port}
                           </span>
                           <span className="whitespace-pre-line leading-relaxed">{log.message}</span>
@@ -1073,17 +1099,21 @@ export default function App() {
                     </AnimatePresence>
 
                     {logs.length === 0 && (
-                      <div className="text-center text-zinc-650 py-16">
+                      <div className={`text-center py-16 ${theme === "dark" ? "text-zinc-650" : "text-zinc-800 font-semibold"}`}>
                         No telemetry logs currently matched the dynamic criteria index filter.
                       </div>
                     )}
                   </div>
 
                   {/* Console Footer Status */}
-                  <div className="bg-[#0c0f16] border-t border-zinc-900 px-4 py-2 flex items-center justify-between font-mono text-[9px] text-zinc-500">
+                  <div className={`border-t px-4 py-2 flex items-center justify-between font-mono text-[9px] ${
+                    theme === "dark" 
+                      ? "bg-[#0c0f16] border-zinc-900 text-zinc-500" 
+                      : "bg-zinc-100 border-zinc-300 text-zinc-800 font-bold"
+                  }`}>
                     <div>PACKETS LOG BUFFER: {logs.length}/20 // AUTO SCRUBBING INDEX</div>
                     <div className="flex items-center gap-1.5">
-                      <span className="flex h-1.5 w-1.5 rounded-full bg-zinc-400 animate-ping" />
+                      <span className={`flex h-1.5 w-1.5 rounded-full animate-ping ${theme === "dark" ? "bg-zinc-400" : "bg-black"}`} />
                       STREAM ACTIVE
                     </div>
                   </div>
@@ -1119,41 +1149,41 @@ export default function App() {
                 
                 {/* User quick presets panel */}
                 <div className={`lg:col-span-4 p-6 border rounded-md transition-colors ${
-                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-200"
+                  theme === "dark" ? "bg-[#0b0d13] border-[#1F242E]" : "bg-white border-zinc-300 shadow-sm"
                 } space-y-6`}>
                   <div>
                     <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-white mb-1 flex items-center gap-2">
-                      <Sparkles className="h-5 w-5 text-zinc-650 dark:text-zinc-400" />
+                      <Sparkles className="h-5 w-5 text-zinc-750 dark:text-zinc-400" />
                       Analytic Templates
                     </h3>
-                    <p className="text-xs text-zinc-700 dark:text-zinc-400 font-normal font-sans">
+                    <p className="text-xs text-zinc-800 dark:text-zinc-400 font-semibold font-sans">
                       Select standard inputs for immediate AI security posturing and real-time CVE correlation.
                     </p>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 text-left">
                     <button
                       onClick={() => handleSendChatMessage("Verify Vanguard anomaly logs and current mitigation status.")}
-                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-805 hover:border-zinc-400 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200"
+                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-300 dark:border-zinc-805 hover:border-zinc-500 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200 shadow-xs"
                     >
-                      <span className="font-bold text-zinc-800 dark:text-zinc-200 block mb-0.5 uppercase tracking-wide">Project Vanguard Audit</span>
-                      Validate network nodes integrity and transaction safety threshold anomalies.
+                      <span className="font-bold text-zinc-950 dark:text-zinc-100 block mb-0.5 uppercase tracking-wide">Project Vanguard Audit</span>
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">Validate network nodes integrity and transaction safety threshold anomalies.</span>
                     </button>
 
                     <button
                       onClick={() => handleSendChatMessage("Provide standard mitigation steps for an active volumetric DDoS injection attack.")}
-                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-805 hover:border-zinc-400 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200"
+                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-300 dark:border-zinc-805 hover:border-zinc-500 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200 shadow-xs"
                     >
-                      <span className="font-bold text-zinc-800 dark:text-zinc-200 block mb-0.5 uppercase tracking-wide">DDoS Mitigation Steps</span>
-                      Request clear, step-by-step mitigation advice for severe SYN-Flood waves.
+                      <span className="font-bold text-zinc-950 dark:text-zinc-100 block mb-0.5 uppercase tracking-wide">DDoS Mitigation Steps</span>
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">Request clear, step-by-step mitigation advice for severe SYN-Flood waves.</span>
                     </button>
 
                     <button
                       onClick={() => handleSendChatMessage("Analyze the SCADA protection parameters within Operation Aegis. How are the PLC writing lock rules configured?")}
-                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-805 hover:border-zinc-400 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200"
+                      className="w-full text-left p-3.5 bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-300 dark:border-zinc-805 hover:border-zinc-500 rounded text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-905 cursor-pointer duration-200 shadow-xs"
                     >
-                      <span className="font-bold text-zinc-800 dark:text-zinc-200 block mb-0.5 uppercase tracking-wide">Operation Aegis Integrity</span>
-                      Review the hardware air-gap status of PLC register locks.
+                      <span className="font-bold text-zinc-950 dark:text-zinc-100 block mb-0.5 uppercase tracking-wide">Operation Aegis Integrity</span>
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">Review the hardware air-gap status of PLC register locks.</span>
                     </button>
                   </div>
 
@@ -1169,22 +1199,38 @@ export default function App() {
                 </div>
 
                 {/* AI Chat Console Interactor */}
-                <div className="lg:col-span-8 flex flex-col h-[525px] rounded-md bg-black border border-zinc-800 dark:border-[#1F242E] overflow-hidden">
+                <div className={`lg:col-span-8 flex flex-col h-[525px] rounded-md border overflow-hidden ${
+                  theme === "dark" 
+                    ? "bg-black border-zinc-800" 
+                    : "bg-white border-zinc-300 shadow-sm"
+                }`}>
                   
                   {/* Console Header */}
-                  <div className="bg-zinc-50 dark:bg-[#0f1116] border-b border-zinc-200 dark:border-zinc-900 px-4 py-3 flex items-center justify-between font-mono text-xs">
+                  <div className={`border-b px-4 py-3 flex items-center justify-between font-mono text-xs ${
+                    theme === "dark" 
+                      ? "bg-zinc-50 dark:bg-[#0f1116] border-b border-zinc-200 dark:border-zinc-900" 
+                      : "bg-zinc-100 border-zinc-300"
+                  }`}>
                     <div className="flex items-center gap-2">
-                      <Sparkles className="h-4 w-4 text-zinc-455 animate-pulse" />
-                      <span className="text-zinc-800 dark:text-zinc-300 font-bold uppercase tracking-wider">SecureLock AI Assistant</span>
+                      <Sparkles className="h-4 w-4 text-zinc-750 dark:text-zinc-400 animate-pulse" />
+                      <span className={`font-bold uppercase tracking-wider ${theme === "dark" ? "text-zinc-300" : "text-black"}`}>
+                        SecureLock AI Assistant
+                      </span>
                     </div>
 
-                    <div className="flex items-center gap-1.5 rounded-full bg-zinc-800 dark:bg-zinc-900/70 border border-zinc-700 px-2.5 py-0.5">
-                      <span className="text-[9px] text-zinc-300 dark:text-zinc-400 font-sans uppercase font-bold">MODEL: gemini-3.5-flash</span>
+                    <div className={`flex items-center gap-1.5 rounded-full px-2.5 py-0.5 ${
+                      theme === "dark" ? "bg-zinc-800/75 border border-zinc-700" : "bg-zinc-200 border border-zinc-300"
+                    }`}>
+                      <span className={`text-[9px] font-sans uppercase font-bold ${theme === "dark" ? "text-zinc-350" : "text-black"}`}>
+                        MODEL: gemini-3.5-flash
+                      </span>
                     </div>
                   </div>
 
                   {/* Chat logs render body */}
-                  <div className="flex-1 overflow-y-auto p-4 space-y-4 select-text bg-[#030406]">
+                  <div className={`flex-1 overflow-y-auto p-4 space-y-4 select-text ${
+                    theme === "dark" ? "bg-[#030406]" : "bg-zinc-50"
+                  }`}>
                     {chatHistory.map((msg) => (
                       <div 
                         key={msg.id} 
@@ -1194,7 +1240,9 @@ export default function App() {
                       >
                         {/* Avatar */}
                         <div className={`h-8 w-8 shrink-0 rounded flex items-center justify-center font-bold text-xs font-mono uppercase ${
-                          msg.role === "user" ? "bg-zinc-900 dark:bg-white text-white dark:text-black font-black" : "bg-zinc-850 dark:bg-zinc-900 text-zinc-400 border border-zinc-800"
+                          msg.role === "user" 
+                            ? "bg-zinc-900 dark:bg-white text-white dark:text-black font-black" 
+                            : (theme === "dark" ? "bg-zinc-900 text-zinc-300 border border-zinc-800" : "bg-white text-black border border-zinc-300 shadow-xs")
                         }`}>
                           {msg.role === "user" ? "U" : "AI"}
                         </div>
@@ -1202,14 +1250,20 @@ export default function App() {
                         {/* Content text */}
                         <div className={`p-4 rounded border leading-relaxed text-xs shadow-sm ${
                           msg.role === "user"
-                            ? "bg-zinc-900/[0.1] dark:bg-zinc-900/40 border-zinc-800 text-zinc-200 text-left"
-                            : "bg-[#0b0d13] border-[#1F242E] text-left text-zinc-300"
+                            ? (theme === "dark"
+                                ? "bg-zinc-900/40 border-zinc-850 text-zinc-200 text-left"
+                                : "bg-zinc-200/60 border-zinc-350 text-black font-medium text-left")
+                            : (theme === "dark"
+                                ? "bg-[#0b0d13] border-[#1F242E] text-left text-zinc-300"
+                                : "bg-white border-zinc-300 text-left text-black font-medium")
                         }`}>
-                          <div className="whitespace-pre-line font-medium leading-relaxed font-sans">
+                          <div className="whitespace-pre-line font-sans">
                             {msg.content}
                           </div>
                           
-                          <div className="text-[9px] text-zinc-500 font-mono mt-2.5 uppercase font-bold">
+                          <div className={`text-[9px] font-mono mt-2.5 uppercase font-bold ${
+                            theme === "dark" ? "text-zinc-500" : "text-zinc-650"
+                          }`}>
                             [ {msg.timestamp || "Active"} ]
                           </div>
                         </div>
@@ -1218,12 +1272,18 @@ export default function App() {
 
                     {isChatLoading && (
                       <div className="mr-auto flex gap-3 max-w-[85%]">
-                        <div className="h-8 w-8 rounded bg-zinc-900 flex items-center justify-center border border-zinc-800 font-bold text-xs text-zinc-400 font-mono">
+                        <div className={`h-8 w-8 rounded flex items-center justify-center font-bold text-xs font-mono ${
+                          theme === "dark" ? "bg-zinc-900 text-zinc-400 border border-zinc-800" : "bg-white text-black border border-zinc-300 shadow-xs"
+                        }`}>
                           AI
                         </div>
-                        <div className="p-4 rounded bg-[#0b0d13] border border-[#1F242E] text-left text-xs font-mono text-zinc-400">
+                        <div className={`p-4 rounded border text-left text-xs font-mono ${
+                          theme === "dark"
+                            ? "bg-[#0b0d13] border-[#1F242E] text-zinc-450"
+                            : "bg-white border-zinc-300 text-black font-medium"
+                        }`}>
                           <span className="inline-block animate-pulse">Running analysis on security posture database...</span>
-                          <span className="ml-[1px] inline-block animate-ping font-extrabold text-white">_</span>
+                          <span className="ml-[1px] inline-block animate-ping font-extrabold text-[#d1d5db]">_</span>
                         </div>
                       </div>
                     )}
@@ -1237,7 +1297,9 @@ export default function App() {
                       e.preventDefault();
                       handleSendChatMessage(chatInput);
                     }}
-                    className="bg-[#0c0f16] border-t border-zinc-800 p-3 flex gap-2"
+                    className={`border-t p-3 flex gap-2 ${
+                      theme === "dark" ? "bg-[#0c0f16] border-zinc-800" : "bg-zinc-100 border-zinc-300"
+                    }`}
                   >
                     <input
                       type="text"
@@ -1245,12 +1307,16 @@ export default function App() {
                       onChange={(e) => setChatInput(e.target.value)}
                       placeholder="Ask the SecureLock Analyst (e.g. 'How do I handle SQL injection attempts?')..."
                       disabled={isChatLoading}
-                      className="flex-1 bg-black border border-zinc-800 focus:border-zinc-500 px-4 py-2 font-sans text-xs text-zinc-250 outline-none rounded disabled:opacity-50 transition-colors focus:ring-1 focus:ring-zinc-650"
+                      className={`flex-1 px-4 py-2 font-sans text-xs outline-none rounded disabled:opacity-50 transition-colors focus:ring-1 ${
+                        theme === "dark" 
+                          ? "bg-black border border-zinc-800 focus:border-zinc-500 text-zinc-250 focus:ring-zinc-650" 
+                          : "bg-white border border-zinc-300 focus:border-zinc-600 text-black focus:ring-zinc-400"
+                      }`}
                     />
                     <button
                       type="submit"
                       disabled={isChatLoading || !chatInput.trim()}
-                      className="bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-black font-mono text-[10px] font-bold px-5 rounded uppercase flex items-center justify-center gap-1.5 disabled:opacity-50 transition-all cursor-pointer border border-zinc-800 dark:border-zinc-200"
+                      className="bg-zinc-950 dark:bg-white hover:bg-zinc-900 dark:hover:bg-zinc-100 text-white dark:text-black font-mono text-[10px] font-bold px-5 rounded uppercase flex items-center justify-center gap-1.5 disabled:opacity-50 transition-all cursor-pointer border border-zinc-800 dark:border-zinc-250"
                     >
                       <Send className="h-3 w-3" />
                       ANALYZE
